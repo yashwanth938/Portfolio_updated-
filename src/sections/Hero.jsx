@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { FaDownload, FaEye, FaArrowDown } from 'react-icons/fa';
+import { FaDownload, FaEye, FaArrowDown,FaCloud  } from 'react-icons/fa';
 import Button from '../components/common/Button';
-import mainpic from '../assets/images/cut_pic.jpg'; // Assuming you have a main picture
+import mainpic from '../assets/images/cut_pic.jpg';
 import resume from '../assets/Yaswanths resume_QA.pdf'; // Path to your resume file
 
 const Hero = () => {
@@ -116,7 +116,7 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start"
             >
-              {/* View My Work Button - Black to Purple Gradient */}
+              {/* View My Work Button */}
               <Button
                 onClick={() => scrollToSection('projects')}
                 className="w-full sm:w-auto bg-gradient-to-r from-black via-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-800 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/25 border border-purple-500/20 hover:border-purple-400/40 flex items-center justify-center gap-3"
@@ -125,18 +125,25 @@ const Hero = () => {
                 View My Work
               </Button>
 
-              {/* Download Resume Button - Fixed Alignment */}
-              <Button
-                onClick={() => window.open({resume}, '_blank')}
-                variant="secondary"
-                className="w-full sm:w-auto border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
+              {/* Download Resume Button */}
+              <a
+                href={resume}
+                download="Yaswanths_resume_QA.pdf"
+                className="w-full sm:w-auto"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <FaDownload className="flex-shrink-0" />
-                <span>Download Resume</span>
-              </Button>
+                <Button
+                  variant="secondary"
+                  className="w-full sm:w-auto border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black font-medium px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  <FaDownload className="flex-shrink-0" />
+                  <span>Download Resume</span>
+                </Button>
+              </a>
             </motion.div>
 
-            {/* Stats - Mobile: Centered, Desktop: Left aligned */}
+            {/* Stats */}
             <motion.div 
               variants={itemVariants}
               className="grid grid-cols-3 gap-4 sm:gap-6 pt-8 max-w-md mx-auto lg:max-w-none lg:mx-0"
@@ -189,7 +196,8 @@ const Hero = () => {
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg"
                 >
-                  <span className="text-white text-xs sm:text-xs font-bold">AZ</span>
+                  
+                  <FaCloud className="text-white text-3xl  font-bold"/>
                 </motion.div>
               </div>
             </div>

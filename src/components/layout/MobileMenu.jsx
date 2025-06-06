@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaTimes } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaTimes,  } from 'react-icons/fa';
 
 const MobileMenu = ({ onClose, scrollToSection }) => {
   const menuVariants = {
@@ -40,9 +40,9 @@ const MobileMenu = ({ onClose, scrollToSection }) => {
 
   const menuItems = ['About', 'Projects', 'Skills', 'Experience', 'Contact'];
   const socialLinks = [
-    { icon: FaLinkedin, href: 'https://linkedin.com/in/yaswanth-kura', color: 'text-blue-400' },
-    { icon: FaGithub, href: 'https://github.com/yaswanth-kura', color: 'text-gray-300' },
-    { icon: FaEnvelope, href: 'mailto:yaswanth@example.com', color: 'text-red-400' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/yash-aa8655135/', color: 'text-blue-400' },
+    { icon: FaGithub, href: 'https://github.com/yashwanth938/yashwanth938/tree/main?tab=readme-ov-file', color: 'text-gray-300' },
+    { icon: FaEnvelope, href: 'mailto:rongalayaswanth@gmail.com', color: 'text-red-400' },
     { icon: FaPhone, href: 'tel:+1234567890', color: 'text-green-400' }
   ];
 
@@ -100,7 +100,7 @@ const MobileMenu = ({ onClose, scrollToSection }) => {
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
                   <FaEnvelope className="text-red-400" />
-                  <span className="text-sm">yaswanth@example.com</span>
+                  <span className="text-sm">rongalayaswanth@gmail.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
                   <FaPhone className="text-green-400" />

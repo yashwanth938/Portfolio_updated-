@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   FaGraduationCap, FaCertificate, FaAward, FaUser, 
-  FaBrain, FaCloud, FaRocket, FaCode 
+  FaBrain, FaCloud, FaRocket, FaCode, FaSalesforce 
 } from 'react-icons/fa';
 import { SiSalesforce, SiCloudflare } from 'react-icons/si';
 import AnimatedHeading from '../components/common/AnimatedHeading';
@@ -183,7 +183,7 @@ const About = () => {
                     transition={{ duration: 3, repeat: Infinity }}
                     className="absolute -top-4 -right-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl p-3 shadow-lg border border-purple-400/30"
                   >
-                    <SiSalesforce className="text-white text-2xl" />
+                    <FaSalesforce  className="text-white text-2xl" />
                   </motion.div>
                 </div>
               </div>
